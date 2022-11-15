@@ -1,2 +1,3 @@
-# Consumer_Complaints_Classification
-Course Project for DSE407: Natural Language Processing
+# Consumer Complaints Classification
+## DSE407: Natural Language Processing
+### Course Project: Text Classification
