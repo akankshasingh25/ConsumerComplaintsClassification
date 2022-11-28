@@ -53,7 +53,7 @@ def feature_selector(feature_selector_type):    #for mutual_info hence dropped
     
 parameters=[
     {
-        'clf': LogisticRegression(max_iter= 10000),
+        'clf': LogisticRegression(max_iter= 1000),
         'clf__penalty': ['l2', 'none'],
         'clf__multi_class': ['ovr', 'multinomial'],
         'clf__C': np.linspace(0.0001, 30, 2),
@@ -94,7 +94,7 @@ for model in parameters:
         
         pipeline = Pipeline([
         ("vector", vectorizer(vectorizer_type)),
-        ("select", SelectKBest(score_func = chi2, k = 5)),
+        ("select", SelectKBest(score_func = chi2, k = 10)),
         ("clf", clf)])
 
         print("\nStarted GridSearchCV")
