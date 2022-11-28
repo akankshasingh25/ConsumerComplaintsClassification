@@ -36,8 +36,8 @@ pipe = Pipeline(
     steps = ([
             ("vect", CountVectorizer(min_df=5, max_df=0.7, ngram_range = (1,3))),
             #("vect", TfidfVectorizer(min_df=5, max_df=0.7)),
-            ("selector", SelectKBest(score_func=chi2, k=3000)),
-            ("clf", LogisticRegression(max_iter= 10000)),
+            ("selector", SelectKBest(score_func=chi2, k=10)),
+            ("clf", LogisticRegression(max_iter= 1000)),
             #("clf", KNeighborsClassifier(metric = 'manhattan', n_neighbors = 5)),
             #("clf", RandomForestClassifier(class_weight='balanced')),
             #("clf", MultinomialNB(alpha= 16.666733333333333, fit_prior = False)),
