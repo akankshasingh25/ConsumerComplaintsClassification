@@ -94,7 +94,7 @@ for model in parameters:
         
         pipeline = Pipeline([
         ("vector", vectorizer(vectorizer_type)),
-        ("select", SelectKBest(score_func = chi2, k = 5000)),
+        ("select", SelectKBest(score_func = chi2, k = 5)),
         ("clf", clf)])
 
         print("\nStarted GridSearchCV")
